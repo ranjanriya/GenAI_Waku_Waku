@@ -25,7 +25,7 @@ def detect_panel_boundaries(image_path, threshold_rel=0.3, min_panel_height=150)
     return peaks.tolist()
 
 
-def filter_panel(panel, white_threshold=0.9, dark_threshold=0.8):
+def filter_panel(panel, white_threshold=0.75, dark_threshold=0.8):
     """
     Check if a panel is mostly white or dark.
     :param panel: The panel image.
@@ -78,7 +78,7 @@ def split_panels(image_path, output_folder, output_prefix="panel", min_panel_hei
     
     return panel_paths
 
-def process_folder(input_folder, output_folder, min_panel_height=150):
+def process_folder(input_folder, output_folder, min_panel_height=200):
     """
     Processes all images in the input folder and splits them into panels.
     :param input_folder: Folder containing the input images.
@@ -95,6 +95,6 @@ def process_folder(input_folder, output_folder, min_panel_height=150):
 
 
 
-input_folder = "your_input_folder"  # Replace with your input folder path
-output_folder = "your_output_folder"  # Replace with your output folder path
+input_folder = "selected"  # Replace with your input folder path
+output_folder = "panel_split_output"  # Replace with your output folder path
 process_folder(input_folder, output_folder)

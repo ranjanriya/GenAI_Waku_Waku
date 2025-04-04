@@ -1,2 +1,9 @@
 venv/
 .venv/
+downloaded_images/
+sorted/
+selected/
+panel_split_output/
+__MACOSX/
+
+.DS_Store
